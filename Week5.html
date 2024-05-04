@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="content"></div>
+
+    <script>
+
+        let items = [
+            ["https://example.com/book1", "Book 1"],
+            ["https://example.com/pencil1", "Pencil 1"],
+            ["https://example.com/paint1", "Paint 1"],
+            ["https://example.com/sketchbook1", "Sketchbook 1"],
+            ["https://example.com/brush1", "Brush 1"]
+        ];
+        
+        document.getElementById("content").innerHTML = "My list of items: <br>";
+
+        items.forEach(function(item) {
+            let link = '<a href="' + item[0] + '">' + item[1] + '</a><br>';
+            document.getElementById("content").innerHTML += link;
+        });
+
+        let colorChosen = "red";
+
+        switch (colorChosen) {
+            case "red":
+                console.log("The chosen color comes in XL only.");
+                break;
+            case "green":
+                console.log("The chosen color comes in S only.");
+                break;
+            case "yellow":
+                console.log("The chosen color is on sale!");
+                break;
+            default:
+                console.log("The chosen color is unavailable or unknown.");
+        }
+
+    </script>
+    
+</body>
+</html>
+
